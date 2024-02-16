@@ -1,0 +1,22 @@
+@model Country
+ <h1 style="text-align: center;">Ülke Detayları</h1>
+ <a asp-action="Index" asp-controller="Home" class="btn">Tüm Ülkeleri Görüntüle</a>
+ <h2 style="text-align: center; padding:5%;">Ülke Adı: @Model.CountryName</h2>
+    <div class="row">
+        
+        <div class="col">
+        <img src="@Model.Flag" alt="flag" style="max-width: 100px;">
+        </div>
+        <div class="col">
+        <p>Başkent: @Model.CapitalName</p>
+        </div>
+        <div class="col">
+        <p>Telefon Kodu: @Model.TelCode</p>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col">
+        <p>Başkent</p>
+        <img src="@Model.CapitalImg" alt="capital" "> 
+        </div>
+    </div>

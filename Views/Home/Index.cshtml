@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Country>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @foreach(var ulke in Model){
+        <ul>
+            <div class=" row">
+                <div class="col">
+                    <a  asp-action="CountryDetail" asp-route-id="@ulke.Id"><li><img class="flag"width="150" height="150" src="@ulke.Flag"></li></a>
+                    
+                </div>
+                <div class="col">
+                    <p class="info">
+                    <h4>@ulke.CountryName</h4>
+                    <h4>@ulke.CapitalName</h4>
+                    </p>
+                </div>
+            </div>
+        </ul>
+    }
+</div>
